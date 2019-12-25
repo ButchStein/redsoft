@@ -1,0 +1,55 @@
+.functions {
+  background-color: #f1f4fc;
+  margin-top: -10em;
+  padding-top: 10em;
+  padding-bottom: 90px;
+  text-align: center;
+}
+.functions__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.functions__item {
+  width: 240px;
+  margin: 0 40px 75px;
+}
+
+.functions__item-img {
+  display: block;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  background-position: 50%;
+  border: 1px solid #bae2f3;
+  background-repeat: no-repeat;
+}
+
+.functions__item-text {
+  text-align: center;
+  font-size: 16px;
+  color: #60759d;
+  display: block;
+}
+
+.functions__item-img_1 {
+  background-image: url(../images/func-icon1.png);
+}
+.functions__item-img_2 {
+  background-image: url(../images/func-icon2.png);
+}
+.functions__item-img_3 {
+  background-image: url(../images/func-icon3.png);
+}
+.functions__item-img_4 {
+  background-image: url(../images/func-icon4.png);
+}
+.functions__item-img_5 {
+  background-image: url(../images/func-icon5.png);
+}
+.functions__item-img_6 {
+  background-image: url(../images/func-icon1.png);
+}

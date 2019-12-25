@@ -1,0 +1,31 @@
+.about {
+  background-image: url(../images/bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
+  z-index: 100;
+  margin-top: -5em;
+  margin-bottom: -50px;
+  min-height: 1030px;
+  display: flex;
+  align-items: center;
+}
+
+.about__text {
+  min-width: 560px;
+  width: 560px;
+  margin-left: 40px;
+  color: #60759d;
+}
+
+.about__list {
+  margin: 0 0 0 20px;
+  padding: 0;
+  list-style: #60759d;
+}
+
+.about__list-item {
+  line-height: 1.5;
+  margin-bottom: 15px;
+}

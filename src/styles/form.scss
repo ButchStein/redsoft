@@ -1,0 +1,81 @@
+.form__line {
+  display: flex;
+  justify-content: space-between;
+  width: 560px;
+  margin: auto;
+  position: relative;
+}
+
+.form__input {
+  background: none;
+  border: 1px solid #4f699b;
+  border-radius: 50px;
+  padding: 20px 33px;
+  font-size: 16px;
+  color: #e70067;;
+  font-weight: 700;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.3s;
+  min-width: 360px;
+}
+
+.form__error-mess {
+  color: #ff0000;
+  font-size: 14px;
+  opacity: 0;
+  transition: all 0.3s;
+  position: absolute;
+  top: -25px;
+  left: 20px;
+}
+
+.form__error {
+  .form__input {
+    border: 1px solid #ff0000;
+  }
+  .form__error-mess {
+    opacity: 1;
+  }
+}
+
+.form__input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #a8b2bf;
+  font-weight: 300;
+  transition: opacity 0.3s ease;
+}
+.form__input::-moz-placeholder {
+  opacity: 1;
+  color: #a8b2bf;
+  font-weight: 300;
+  transition: opacity 0.3s ease;
+}
+.form__input:-moz-placeholder {
+  opacity: 1;
+  color: #a8b2bf;
+  font-weight: 300;
+  transition: opacity 0.3s ease;
+}
+.form__input:-ms-input-placeholder {
+  opacity: 1;
+  color: #a8b2bf;
+  font-weight: 300;
+  transition: opacity 0.3s ease;
+}
+.form__input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.form__input:focus::-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.form__input:focus:-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.form__input:focus:-ms-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
