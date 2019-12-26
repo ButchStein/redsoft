@@ -17,7 +17,6 @@ module.exports = {
     port: 3030
   },
 
-
   module: {
     rules: [
       {
@@ -32,10 +31,24 @@ module.exports = {
         test: /\.scss$/,
         use: [
           { loader: 'style-loader' },
-          { loader: MiniCssExtractPlugin.loader },
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../'
+            }
+          },
           { loader: 'css-loader' },
           { loader: 'sass-loader' }
         ]
+      },
+      {
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader',
+          options: {
+            attrs: ['img:src']
+          }
+        }
       },
       {
         test: /\.(png|jpe?g|gif)$/,
@@ -44,8 +57,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: './images/',
-              publicPath: '../images/'
+              outputPath: './images/'
             }
           }
         ]
@@ -57,8 +69,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: './images/',
-              publicPath: '../images/'
+              outputPath: './images/'
             }
           },
           {
@@ -83,22 +94,13 @@ module.exports = {
           outputPath: './fonts/',
           publicPath: '../fonts/'
         }
-      },
-      {
-        test: /\.(html)$/,
-        use: {
-          loader: 'html-loader',
-          options: {
-            attrs: ['img:src']
-          }
-        }
       }
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({ 
+    new HtmlWebpackPlugin({
       filename: './index.html',
-      template: './index.html' 
+      template: './index.html'
     }),
     new MiniCssExtractPlugin({ filename: 'css/[name].css' }),
     new webpack.ProvidePlugin({
